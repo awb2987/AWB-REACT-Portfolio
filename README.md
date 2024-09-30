@@ -1,39 +1,43 @@
-# AWB-REACT-PORTFOLIO
+# My React Portfolio
 
 ## Description
-This is a portfolio website created using React to showcase my projects and skills as a web developer. The application includes sections for "About Me," "Portfolio," "Contact," and "Resume." Each section is accessible via a navigation bar, and the site is designed to be responsive and user-friendly.
+This portfolio showcases my projects and skills as a web developer. It is built using React and highlights my journey in coding, particularly during my time in the University of Toronto Bootcamp. As a beekeeper, I aim to implement code that benefits beekeepers worldwide by gathering data to better understand honeybees and native bees.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
+- [Screenshots](#screenshots)
+- [Links](#links)
 - [Contact](#contact)
 
 ## Installation
-To get started with this project, clone the repository and install the necessary dependencies.
-
-```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-npm install
-```
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd <your-project-directory>
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
 ## Usage
-To run the application in development mode, use the following command:
-
+To start the development server, run:
 ```bash
 npm run dev
 ```
-
-Navigate to `http://localhost:3000` in your web browser to view the app.
+Navigate to `http://localhost:3000` in your browser to view the portfolio.
 
 ## Features
-- Responsive design
-- Navigation between sections
-- Contact form (static for now)
-- Dynamic portfolio display
+- About Me section with a brief bio and photo.
+- Portfolio section showcasing various projects.
+- Contact section with a form for users to reach out.
+- Resume section with a downloadable PDF.
 
 ## Technologies Used
 - React
@@ -41,16 +45,13 @@ Navigate to `http://localhost:3000` in your web browser to view the app.
 - CSS
 - React Router
 
-## Deployment
-This application is deployed on [Netlify](https://your-app-url.netlify.app). You can view the live site [here](https://your-app-url.netlify.app).
+## Screenshots
+![Screenshot of Home Page](path/to/screenshot1.png)
+![Screenshot of Portfolio Page](path/to/screenshot2.png)
+
+## Links
+- GitHub Repository: [Your GitHub](https://github.com/yourusername/repo)
+- Deployed Application: [Deployed URL](https://your-deployed-url.com)
 
 ## Contact
-For inquiries, feel free to reach out to me at:
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/yourusername)
-- GitHub: [Your GitHub Profile](https://github.com/yourusername)
-- Instagram: [My Instagram Profile](https://instagram.com/MerciMiku)
-
----
-
-Thank you for visiting my portfolio!
+For inquiries, please reach out to me via email: [awb2987@gmail.com](mailto:awb2987@gmail.com)
