@@ -50,7 +50,7 @@ Navigate to `http://localhost:3000` in your browser to view the portfolio.
 ![Screenshot of Portfolio Page](path/to/screenshot2.png)
 
 ## Links
-- GitHub Repository: [Your GitHub](https://github.com/yourusername/repo)
+- GitHub Repository: [Your GitHub](https://github.com/awb2987/AWB-REACT-Portfolio)
 - Deployed Application: [Deployed URL](https://your-deployed-url.com)
 
 ## Contact

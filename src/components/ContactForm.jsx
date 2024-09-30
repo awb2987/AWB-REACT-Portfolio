@@ -76,7 +76,7 @@ const ContactForm = () => {
 
         <button type="submit">Send Message</button>
       </form>
-      <p>My email: <strong>awb2987@gmail.com</strong></p> {/* Your email displayed below the form */}
+      <p>My email: <strong>awb2987@gmail.com</strong></p>
     </div>
   );
 };

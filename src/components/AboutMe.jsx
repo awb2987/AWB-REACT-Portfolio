@@ -6,9 +6,13 @@ const AboutMe = () => {
       <h2>About Me</h2>
       <img src="link-to-your-photo.jpg" alt="Your Name" />
       <p>
-        Welcome to my React portfolio! I am currently studying at the UofT Bootcamp, where I've developed skills in web development.
-        As a beekeeper, I aim to implement code that benefits beekeepers worldwide by gathering data to better understand honeybees and native bees.
-        This portfolio includes a section about me, my resume, and my contact information where you can reach me.
+        I'm Alexander Braff, a passionate beekeeper and web developer. I strive to harness technology to support beekeepers worldwide by gathering data to better understand honeybees and native bees.
+      </p>
+      <p>
+        This portfolio showcases my journey through the UofT Bootcamp, highlighting my projects that reflect my skills in web development and my commitment to creating a positive impact in the beekeeping community.
+      </p>
+      <p>
+        Feel free to explore my projects, resume, and contact me for any inquiries!
       </p>
     </section>
   );
