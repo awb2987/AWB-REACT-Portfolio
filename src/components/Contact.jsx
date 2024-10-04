@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { validateForm } from './common/FormValidation';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,10 +30,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form data
-    const newErrors = validateForm(formData); // Validate overall form
-    setErrors(newErrors);
-
     // Check if email is a valid format
     if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Invalid email address input';
@@ -60,7 +55,6 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            onBlur={handleBlur} // Validate on blur
             required
           />
           {errors.name && <p className="error">{errors.name}</p>}
@@ -74,7 +68,6 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            onBlur={handleBlur} // Validate on blur
             required
           />
           {errors.email && <p className="error">{errors.email}</p>}
@@ -87,7 +80,6 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            onBlur={handleBlur} // Validate on blur
             required
           ></textarea>
           {errors.message && <p className="error">{errors.message}</p>}
