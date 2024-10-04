@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "install": "npm install"
+    "preinstall": "npm install"
 
   },
   "author": "Alexander Braff",
