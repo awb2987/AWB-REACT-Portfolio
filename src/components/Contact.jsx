@@ -29,19 +29,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newErrors = {};
 
     // Check if email is a valid format
     if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Invalid email address input';
+    }
+
+    // Show required field errors for empty fields
+    for (const field in formData) {
+      if (!formData[field]) {
+        newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
+      }
+    }
+
+    // If no errors, set them to state
+    if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      return;
     }
 
     // If no errors, log form data and reset the form
-    if (Object.keys(newErrors).length === 0) {
-      console.log('Form submitted:', formData);
-      setSuccessMessage('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-    }
+    console.log('Form submitted:', formData);
+    setSuccessMessage('Message sent successfully!');
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
@@ -55,6 +66,7 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
           />
           {errors.name && <p className="error">{errors.name}</p>}
@@ -68,6 +80,7 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
           />
           {errors.email && <p className="error">{errors.email}</p>}
@@ -80,6 +93,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
           ></textarea>
           {errors.message && <p className="error">{errors.message}</p>}
