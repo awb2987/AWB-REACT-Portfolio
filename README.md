@@ -51,7 +51,8 @@ Navigate to `http://localhost:3000/` in your browser to view the portfolio.
 
 ## Links
 - GitHub Repository: [Your GitHub](https://github.com/awb2987/AWB-REACT-Portfolio)
-- Deployed Application: [Deployed URL](https://66ffd05a59d0c20008148a88--a-w-bee-portfolio.netlify.app/)
+- Deployed Application: [Deployed URL] (https://a-w-bee-portfolio.netlify.app/)
+- Backup Permalink: [Backup Permalink] (https://66ffd05a59d0c20008148a88--a-w-bee-portfolio.netlify.app/)
 
 ## Contact
 For inquiries, please reach out to me via email: [awb2987@gmail.com](mailto:awb2987@gmail.com)
