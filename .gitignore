@@ -9,9 +9,6 @@ node_modules/
 .env.local
 .env.*.local
 
-# Vite specific files
-.vite/
-
 # IDE and editor files
 .idea/
 .vscode/
@@ -24,9 +21,6 @@ Thumbs.db
 
 # Coverage directory used by tools like istanbul
 coverage/
-
-# Optional npm cache directory
-.npm
 
 # Yarn integrity file
 .yarn-integrity
