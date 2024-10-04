@@ -31,7 +31,7 @@ To start the development server, run:
 ```bash
 npm run dev
 ```
-Navigate to `http://localhost:3000` in your browser to view the portfolio.
+Navigate to `http://localhost:5173/` in your browser to view the portfolio.
 
 ## Features
 - About Me section with a brief bio and photo.
@@ -46,8 +46,8 @@ Navigate to `http://localhost:3000` in your browser to view the portfolio.
 - React Router
 
 ## Screenshots
-![Screenshot of Home Page](path/to/screenshot1.png)
-![Screenshot of Portfolio Page](path/to/screenshot2.png)
+![Screenshot of About Me Home Page Top](/src/assets/screenshots/Screenshot%20of%20AboutMe%20page%20top.png)
+![Screenshot of About Me Home Page Bottom](/src/assets/screenshots/Screenshot%20of%20AboutMe%20page%20bottom.png)
 
 ## Links
 - GitHub Repository: [Your GitHub](https://github.com/awb2987/AWB-REACT-Portfolio)
