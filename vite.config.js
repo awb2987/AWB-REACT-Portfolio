@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// Define and export the Vite configuration
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -9,6 +10,9 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      input: 'index.html',
+    },
   },
   root: './',
 });
