@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { validateForm } from './common/FormValidation';
 
-const ContactForm = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -8,27 +9,42 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    // Clear error messages for the current field
+    setErrors({ ...errors, [name]: '' });
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+
+    // Show required field error if field is empty
+    if (!value) {
+      setErrors({ ...errors, [name]: `${name.charAt(0).toUpperCase() + name.slice(1)} is required` });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newErrors = {};
-    if (!formData.name) newErrors.name = 'A name is required';
-    if (!formData.email) {
-      newErrors.email = 'An email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email address entered is invalid';
-    }
-    if (!formData.message) newErrors.message = 'A message is required';
 
+    // Validate form data
+    const newErrors = validateForm(formData); // Validate overall form
     setErrors(newErrors);
 
+    // Check if email is a valid format
+    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Invalid email address input';
+      setErrors(newErrors);
+    }
+
+    // If no errors, log form data and reset the form
     if (Object.keys(newErrors).length === 0) {
       console.log('Form submitted:', formData);
+      setSuccessMessage('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     }
   };
@@ -44,6 +60,7 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            onBlur={handleBlur} // Validate on blur
             required
           />
           {errors.name && <p className="error">{errors.name}</p>}
@@ -57,6 +74,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={handleBlur} // Validate on blur
             required
           />
           {errors.email && <p className="error">{errors.email}</p>}
@@ -69,6 +87,7 @@ const ContactForm = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            onBlur={handleBlur} // Validate on blur
             required
           ></textarea>
           {errors.message && <p className="error">{errors.message}</p>}
@@ -76,9 +95,14 @@ const ContactForm = () => {
 
         <button type="submit">Send Message</button>
       </form>
-      <p>My email: <strong>awb2987@gmail.com</strong></p>
+      {successMessage && <p className="success">{successMessage}</p>}
+      <div className="contact-info">
+        <p>
+          Email: <span className="email-address">awb2987@gmail.com</span>
+        </p>
+      </div>
     </div>
   );
 };
 
-export default ContactForm;
+export default Contact;

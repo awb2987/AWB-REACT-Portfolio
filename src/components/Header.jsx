@@ -3,9 +3,11 @@ import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <h1>Alexander Braff</h1>
-      <Navigation />
+      <nav>
+        <Navigation />
+      </nav>
     </header>
   );
 };

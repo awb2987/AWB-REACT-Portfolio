@@ -1,19 +1,29 @@
 {
   "name": "awb-react-portfolio",
   "version": "1.0.0",
-  "description": "My React portfolio that describes past projects during my time studying via UofT BOOTCAMP. I am a beekeper that is tryng to implement code to benefit beekeepers worldwide through gathering data to better understand honeybees as well as native bees. This portfolio includes a section about me, my resume and my contact information where you can reach me",
+  "description": "My React portfolio that describes a section about me, my resume, and my contact information where you can reach me.",
   "main": "vite.config.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "author": "Alexander Braff",
   "license": "ISC",
   "dependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "vite": "^4.0.0"
   }
 }

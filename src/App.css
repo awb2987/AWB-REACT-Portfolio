@@ -2,7 +2,7 @@
 
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -32,11 +32,13 @@ nav ul li {
 nav a {
     color: #ffcc00;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     text-decoration: underline;
     color: #ffcc00;
+    background-color: rgba(255, 204, 0, 0.2);
 }
 
 /* Section Styles */
@@ -48,6 +50,37 @@ section {
     background-color: #2c2c2c;
 }
 
+.profile-pic {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.resume-link {
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: bold;
+}  
+
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}  
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+  
 /* Footer Styles */
 footer {
     text-align: center;
@@ -59,6 +92,29 @@ footer {
 /* Error Message Styles */
 .error {
     color: #ffcc00;
+}
+
+/* Button Styles */
+button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 204, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
 /* Add some bee-inspired hover effects */

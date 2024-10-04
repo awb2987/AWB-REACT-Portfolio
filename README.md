@@ -15,7 +15,7 @@ This portfolio showcases my projects and skills as a web developer. It is built 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/awb2987/AWB-REACT-Portfolio
    ```
 2. Navigate into the project directory:
    ```bash
